@@ -1,0 +1,10 @@
+#!/bin/sh
+#script by ibonobo
+#nano /usr/local/bin/updatekali
+#chmod +X /usr/local/bin/updatekali
+#crontab -e ||| followed by line | 0 3 * * * /usr/local/bin/updatekali
+
+#apt-get update -y && apt-get upgrade -y && apt-get dist-upgrade -y
+apt-get update -y > /dev/null && apt-get upgrade -y > /dev/null && apt-get dist-upgrade -y > /dev/null
+apt-get autoclean -y && apt-get clean -y
+apt-get autoremove -yy
